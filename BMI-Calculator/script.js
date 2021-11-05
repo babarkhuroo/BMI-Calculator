@@ -13,21 +13,22 @@ submit.addEventListener('click', (e) => {
 
 function displayResult(bmiValue) {
     const result = bmiValue.toFixed(1)
+    let status = ''
     if (bmiValue <= 18.5) {
-        display.innerText = `${result} : Underweight`
+        status = 'Underweight'
         display.style.color = 'cyan'
     } else if (bmiValue >= 18.5 && bmiValue <= 24.9) {
-        display.innerText = `${result} : Normal`
+        status = 'Normal'
         display.style.color = 'lime'
     } else if (bmiValue >= 25 && bmiValue <= 29.9) {
-        display.innerText = `${result} : Overweight`
+        status = 'Overweight'
         display.style.color = 'yellow'
     } else if (bmiValue >= 30 && bmiValue <= 34.9) {
-        display.innerText = `${result} : Obese`
+        status = 'Obese'
         display.style.color = 'orange'
     } else if (bmiValue >= 35) {
-        display.innerText = `${result} : Extremely Obese`
+        status = 'Extremely Obese'
         display.style.color = 'red'
     }
-    return bmiValue
+    display.innerText = `${result} : ${status}`
 }
