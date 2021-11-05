@@ -31,4 +31,6 @@ function displayResult(bmiValue) {
         display.style.color = 'red'
     }
     display.innerText = `${result} : ${status}`
+    weight.value = ''
+    height.value = ''
 }
