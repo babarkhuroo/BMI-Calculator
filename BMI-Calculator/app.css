@@ -37,12 +37,18 @@ body {
   margin: 0 20px;
 }
 
+.sec-form,
+.sec-result {
+  width: 40%;
+  margin: 0 auto;
+}
+
 h1 {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 .form {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
@@ -61,20 +67,29 @@ h1 {
 
 #male {
   content: url('icons/man.png');
-  height: 50px;
-  width: 50px;
-  appearance: none;
 }
 
 #female {
   content: url('icons/woman.png');
-  height: 50px;
-  width: 50px;
+}
+
+#male,
+#female {
+  height: 70px;
+  width: 70px;
   appearance: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+#male:hover,
+#female:hover {
+  opacity: 60%;
+  cursor: pointer;
 }
 
 input[type='number'] {
   width: 70%;
+  height: 20px;
 }
 
 .button {
@@ -95,6 +110,18 @@ input[type='number'] {
   background-color: aquamarine;
 }
 
+.gradient {
+  height: 25px;
+  width: 90%;
+  background: linear-gradient(to right, cyan, lime, yellow, orange, red);
+}
+
+#pointer {
+  content: url(icons/traingle.png);
+  width: 20px;
+  height: 20px;
+}
+
 @media (max-width: 600px) {
   .navbar {
     flex-direction: column;
@@ -103,133 +130,8 @@ input[type='number'] {
   .main-container {
     flex-direction: column;
   }
-}
-
-/* nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #19d3da;
-}
-
-nav a {
-  color: black;
-  text-decoration: none;
-  margin: 10px 0;
-  font-weight: 700;
-  font-size: 1.4rem;
-  transition: color 0.15s ease-in;
-}
-
-nav a:hover {
-  color: darkslategrey;
-}
-
-.logo {
-  font-size: 2rem;
-}
-
-main {
-  display: flex;
-  justify-content: center;
-  margin: auto 20px;
-}
-
-h1 {
-  font-size: 2rem;
-  margin-bottom: 50px;
-  text-align: center;
-}
-
-form {
-  font-weight: 500;
-  font-size: 1.6rem;
-}
-
-form p {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-form input {
-  width: 70%;
-}
-
-.genders {
-  display: flex;
-  justify-content: space-around;
-}
-
-#male {
-  content: url('icons/man.png');
-  height: 70px;
-  width: 70px;
-  appearance: none;
-}
-
-#female {
-  content: url('icons/woman.png');
-  height: 70px;
-  width: 70px;
-  appearance: none;
-}
-
-button {
-  font-family: 'Fira Sans Condensed', Helvetica, sans-serif;
-  font-weight: 500;
-  font-size: 1.3rem;
-  margin-top: 20px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  background-color: #19d3da;
-  color: black;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  transform: translateX(100%);
-  transition: background-color 0.2s ease-in;
-}
-
-button:hover {
-  background-color: rgba(0, 123, 255, 0.7);
-}
-
-section.form,
-section.result {
-  width: 50%;
-  margin: auto 5%;
-}
-
-.gradient {
-  margin: 0;
-  height: 30px;
-  width: 100%;
-  background: linear-gradient(
-    to right,
-    cyan,
-    rgb(73, 230, 73),
-    yellow,
-    orange,
-    red
-  );
-}
-
-#pointer {
-  height: 25px;
-  width: 25px;
-}
-
-@media (max-width: 900px) {
-  nav {
-    flex-direction: column;
+  .sec-form,
+  .sec-result {
+    width: 90%;
   }
-  main {
-    flex-direction: column;
-  }
-  section.form,
-  section.result {
-    width: 100%;
-    margin: 0;
-  }
-} */
+}
