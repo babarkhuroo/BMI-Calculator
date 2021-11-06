@@ -116,7 +116,7 @@ input[type='number'] {
 
 .gradient {
   height: 25px;
-  width: 90%;
+  width: 100%;
   background: linear-gradient(to right, cyan, lime, yellow, orange, red);
 }
 
@@ -124,6 +124,21 @@ input[type='number'] {
   content: url(icons/traingle.png);
   width: 20px;
   height: 20px;
+  position: relative;
+  left: -10px;
+}
+
+.display-res {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.display-stat {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
 }
 
 @media (max-width: 600px) {
