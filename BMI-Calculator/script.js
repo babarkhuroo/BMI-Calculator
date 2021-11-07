@@ -7,23 +7,31 @@ const appendCont = document.querySelector('.sec-result')
 const disRes = document.getElementsByClassName('display-res')
 const disStat = document.getElementsByClassName('display-stat')
 
+let bmi = 0
+
 submit.addEventListener('click', (e) => {
     e.preventDefault()
-    // the chunk of code i needed help with
-    if (disRes.length > 0 && disStat.length > 0) {
-        disRes[0].remove()
-        disStat[0].remove()
-    }
-
     if (weight.value && height.value) {
+        // the chunk of code i needed help with
+        if (disRes.length > 0 && disStat.length > 0) {
+            disRes[0].remove()
+            disStat[0].remove()
+        }
+
         let weightValue = weight.value
         let heightValue = height.value / 100
-        const bmi = weightValue / Math.pow(heightValue, 2)
+        bmi = weightValue / Math.pow(heightValue, 2)
         displayResult(bmi)
+        weight.value = height.value = ''
     } else {
         alert('bruh... fill those values')
     }
-    weight.value = height.value = ''
+})
+
+let gradWidth = gradient.offsetWidth
+window.addEventListener('resize', () => {
+    gradWidth = gradient.offsetWidth
+    pointer.style.left = `${((gradWidth / 5) - 100) + bmi}`
 })
 
 function displayResult(bmiValue) {

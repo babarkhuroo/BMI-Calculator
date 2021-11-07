@@ -31,6 +31,10 @@ body {
   color: slategrey;
 }
 
+#hide {
+  display: none;
+}
+
 .main-container {
   display: flex;
   justify-content: space-around;
